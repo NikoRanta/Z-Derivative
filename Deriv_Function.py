@@ -178,7 +178,6 @@ def Derivative_Start(folderPath_Input,folderPath_Output,deriv_order):
                 holograms_made += 1
                 first_slice += maximum_time_slices_allowed
                 t_slice_counter = 0
-    if Save_As_Hyperstack_Check.get() == 1:
         if Number_of_Holograms_Needed == 1:
             print(f'\nStarted Saving ({np.round(timeit.default_timer() - begin_timer,3)} seconds)')
             io.imsave(folderPath_Output+'/'+str(first_slice)+'_'+str(time_slice+1)+'_Deriv_'+str(int(deriv_order[0]))+'_'+str(int(deriv_order[1]))+'_'+str(int(deriv_order[2]))+'.tif',Deriv_Stack)
